@@ -1,0 +1,39 @@
+#########################
+# Oceanographic Dataset #
+#########################
+
+{% for i in range(20) %}
+oceanographic_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/Oceanographic/data.txt
+  filepath_index_columns: data/01_raw/Oceanographic/index_features.txt
+  filepath_index_rows: data/01_raw/Oceanographic/index_train_{{i}}.txt
+
+oceanographic_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/Oceanographic/data.txt
+  filepath_index_columns: data/01_raw/Oceanographic/index_target.txt
+  filepath_index_rows: data/01_raw/Oceanographic/index_train_{{i}}.txt
+
+oceanographic_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/Oceanographic/data.txt
+  filepath_index_columns: data/01_raw/Oceanographic/index_features.txt
+  filepath_index_rows: data/01_raw/Oceanographic/index_test_{{i}}.txt
+
+oceanographic_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/Oceanographic/data.txt
+  filepath_index_columns: data/01_raw/Oceanographic/index_target.txt
+  filepath_index_rows: data/01_raw/Oceanographic/index_test_{{i}}.txt
+
+oceanographic_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/Oceanographic/model_{{i}}_{{i}}
+
+{% endfor %}
+
+oceanographic.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/Oceanographic/summary.csv
+

@@ -1,0 +1,381 @@
+#############################################
+# UCI Datasets for Single-output Regression #
+#############################################
+
+#### Boston ####
+
+{% for i in range(20) %}
+uci_boston_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/bostonHousing/data.txt
+  filepath_index_columns: data/01_raw/UCI/bostonHousing/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/bostonHousing/index_train_{{i}}.txt
+
+uci_boston_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/bostonHousing/data.txt
+  filepath_index_columns: data/01_raw/UCI/bostonHousing/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/bostonHousing/index_train_{{i}}.txt
+
+uci_boston_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/bostonHousing/data.txt
+  filepath_index_columns: data/01_raw/UCI/bostonHousing/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/bostonHousing/index_test_{{i}}.txt
+
+uci_boston_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/bostonHousing/data.txt
+  filepath_index_columns: data/01_raw/UCI/bostonHousing/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/bostonHousing/index_test_{{i}}.txt
+
+uci_boston_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/bostonHousing/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_boston.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/bostonHousing/summary.csv
+
+#### Concrete ####
+
+{% for i in range(20) %}
+uci_concrete_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/concrete/data.txt
+  filepath_index_columns: data/01_raw/UCI/concrete/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/concrete/index_train_{{i}}.txt
+
+uci_concrete_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/concrete/data.txt
+  filepath_index_columns: data/01_raw/UCI/concrete/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/concrete/index_train_{{i}}.txt
+
+uci_concrete_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/concrete/data.txt
+  filepath_index_columns: data/01_raw/UCI/concrete/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/concrete/index_test_{{i}}.txt
+
+uci_concrete_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/concrete/data.txt
+  filepath_index_columns: data/01_raw/UCI/concrete/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/concrete/index_test_{{i}}.txt
+
+uci_concrete_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/concrete/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_concrete.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/concrete/summary.csv
+
+#### Energy ####
+
+{% for i in range(20) %}
+uci_energy_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/energy/data.txt
+  filepath_index_columns: data/01_raw/UCI/energy/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/energy/index_train_{{i}}.txt
+
+uci_energy_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/energy/data.txt
+  filepath_index_columns: data/01_raw/UCI/energy/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/energy/index_train_{{i}}.txt
+
+uci_energy_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/energy/data.txt
+  filepath_index_columns: data/01_raw/UCI/energy/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/energy/index_test_{{i}}.txt
+
+uci_energy_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/energy/data.txt
+  filepath_index_columns: data/01_raw/UCI/energy/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/energy/index_test_{{i}}.txt
+
+uci_energy_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/energy/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_energy.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/energy/summary.csv
+
+#### kin8nm ####
+
+{% for i in range(20) %}
+uci_kin8nm_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/kin8nm/data.txt
+  filepath_index_columns: data/01_raw/UCI/kin8nm/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/kin8nm/index_train_{{i}}.txt
+
+uci_kin8nm_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/kin8nm/data.txt
+  filepath_index_columns: data/01_raw/UCI/kin8nm/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/kin8nm/index_train_{{i}}.txt
+
+uci_kin8nm_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/kin8nm/data.txt
+  filepath_index_columns: data/01_raw/UCI/kin8nm/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/kin8nm/index_test_{{i}}.txt
+
+uci_kin8nm_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/kin8nm/data.txt
+  filepath_index_columns: data/01_raw/UCI/kin8nm/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/kin8nm/index_test_{{i}}.txt
+
+uci_kin8nm_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/kin8nm/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_kin8nm.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/kin8nm/summary.csv
+
+#### Naval Propulsion Plant ####
+
+{% for i in range(20) %}
+uci_naval_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/naval-propulsion-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/naval-propulsion-plant/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/naval-propulsion-plant/index_train_{{i}}.txt
+
+uci_naval_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/naval-propulsion-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/naval-propulsion-plant/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/naval-propulsion-plant/index_train_{{i}}.txt
+
+uci_naval_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/naval-propulsion-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/naval-propulsion-plant/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/naval-propulsion-plant/index_test_{{i}}.txt
+
+uci_naval_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/naval-propulsion-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/naval-propulsion-plant/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/naval-propulsion-plant/index_test_{{i}}.txt
+
+uci_naval_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/naval-propulsion-plant/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_naval.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/naval-propulsion-plant/summary.csv
+
+#### Power Plant ####
+
+{% for i in range(20) %}
+uci_power_plant_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/power-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/power-plant/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/power-plant/index_train_{{i}}.txt
+
+uci_power_plant_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/power-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/power-plant/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/power-plant/index_train_{{i}}.txt
+
+uci_power_plant_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/power-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/power-plant/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/power-plant/index_test_{{i}}.txt
+
+uci_power_plant_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/power-plant/data.txt
+  filepath_index_columns: data/01_raw/UCI/power-plant/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/power-plant/index_test_{{i}}.txt
+
+uci_power_plant_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/power-plant/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_power_plant.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/power-plant/summary.csv
+
+#### Protein Tertiary Structure ####
+
+{% for i in range(5) %}
+uci_protein_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/protein-tertiary-structure/data.txt
+  filepath_index_columns: data/01_raw/UCI/protein-tertiary-structure/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/protein-tertiary-structure/index_train_{{i}}.txt
+
+uci_protein_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/protein-tertiary-structure/data.txt
+  filepath_index_columns: data/01_raw/UCI/protein-tertiary-structure/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/protein-tertiary-structure/index_train_{{i}}.txt
+
+uci_protein_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/protein-tertiary-structure/data.txt
+  filepath_index_columns: data/01_raw/UCI/protein-tertiary-structure/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/protein-tertiary-structure/index_test_{{i}}.txt
+
+uci_protein_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/protein-tertiary-structure/data.txt
+  filepath_index_columns: data/01_raw/UCI/protein-tertiary-structure/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/protein-tertiary-structure/index_test_{{i}}.txt
+
+uci_protein_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/protein-tertiary-structure/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_protein.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/protein-tertiary-structure/summary.csv
+
+#### Wine Quality Red ####
+
+{% for i in range(20) %}
+uci_wine_quality_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/wine-quality-red/data.txt
+  filepath_index_columns: data/01_raw/UCI/wine-quality-red/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/wine-quality-red/index_train_{{i}}.txt
+
+uci_wine_quality_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/wine-quality-red/data.txt
+  filepath_index_columns: data/01_raw/UCI/wine-quality-red/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/wine-quality-red/index_train_{{i}}.txt
+
+uci_wine_quality_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/wine-quality-red/data.txt
+  filepath_index_columns: data/01_raw/UCI/wine-quality-red/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/wine-quality-red/index_test_{{i}}.txt
+
+uci_wine_quality_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/wine-quality-red/data.txt
+  filepath_index_columns: data/01_raw/UCI/wine-quality-red/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/wine-quality-red/index_test_{{i}}.txt
+
+uci_wine_quality_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/wine-quality-red/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_wine_quality.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/wine-quality-red/summary.csv
+
+#### Yacht ####
+
+{% for i in range(20) %}
+uci_yacht_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/yacht/data.txt
+  filepath_index_columns: data/01_raw/UCI/yacht/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/yacht/index_train_{{i}}.txt
+
+uci_yacht_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/yacht/data.txt
+  filepath_index_columns: data/01_raw/UCI/yacht/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/yacht/index_train_{{i}}.txt
+
+uci_yacht_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/yacht/data.txt
+  filepath_index_columns: data/01_raw/UCI/yacht/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/yacht/index_test_{{i}}.txt
+
+uci_yacht_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/yacht/data.txt
+  filepath_index_columns: data/01_raw/UCI/yacht/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/yacht/index_test_{{i}}.txt
+
+uci_yacht_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/yacht/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_yacht.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/yacht/summary.csv
+
+#### Year Prediction MSD ####
+
+{% for i in range(1) %}
+uci_year_prediction_msd_{{i}}.x_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/year-prediction-msd/data.txt
+  filepath_index_columns: data/01_raw/UCI/year-prediction-msd/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/year-prediction-msd/index_train_{{i}}.txt
+  load_args:
+    data_delimiter: ","
+
+uci_year_prediction_msd_{{i}}.y_train:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/year-prediction-msd/data.txt
+  filepath_index_columns: data/01_raw/UCI/year-prediction-msd/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/year-prediction-msd/index_train_{{i}}.txt
+  load_args:
+    data_delimiter: ","
+
+uci_year_prediction_msd_{{i}}.x_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/year-prediction-msd/data.txt
+  filepath_index_columns: data/01_raw/UCI/year-prediction-msd/index_features.txt
+  filepath_index_rows: data/01_raw/UCI/year-prediction-msd/index_test_{{i}}.txt
+  load_args:
+    data_delimiter: ","
+
+uci_year_prediction_msd_{{i}}.y_test:
+  type: probabilistic_flow_boosting.extras.datasets.uci_dataset.UCIDataSet
+  filepath_data: data/01_raw/UCI/year-prediction-msd/data.txt
+  filepath_index_columns: data/01_raw/UCI/year-prediction-msd/index_target.txt
+  filepath_index_rows: data/01_raw/UCI/year-prediction-msd/index_test_{{i}}.txt
+  load_args:
+    data_delimiter: ","
+
+uci_year_prediction_msd_{{i}}.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/UCI/year-prediction-msd/model_{{i}}_{{i}}
+
+{% endfor %}
+
+uci_year_prediction_msd.aggregated_summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/UCI/year-prediction-msd/summary.csv

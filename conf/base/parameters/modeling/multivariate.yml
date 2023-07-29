@@ -1,0 +1,39 @@
+### NGBOOST CONFIG ###
+
+base_tree_params:
+  criterion: "friedman_mse"
+  min_samples_split: 2
+  min_weight_fraction_leaf: 0.0
+  splitter: "best"
+
+base_tree_hyperparams:
+  max_depth: [5, 10, 15]
+  min_samples_leaf: [1, 15, 32]
+  max_leaf_nodes: [8, 15, 32, 64]
+
+ngboost_params:
+  learning_rate: 0.01
+
+ngboost_hyperparams:
+  n_estimators: [2000]
+
+independent: False
+independent_model_type: "NGBoost"
+
+### CATBOOST CONFIG ###
+
+#base_tree_params:
+#  foo: "bar"  # Unused arg but required
+#base_tree_hyperparams:
+#  foo: ["bar"]  # Unused arg but required
+#
+#ngboost_params:
+#  loss_function: "RMSEWithUncertainty"
+#
+#ngboost_hyperparams:
+#  num_trees: [1000, 1500, 2000]
+#  depth: [5, 6, 7, 8]
+#  learning_rate: [0.1, 0.01]
+#
+#independent: True
+#independent_model_type: "CatBoost"

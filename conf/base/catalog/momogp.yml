@@ -1,0 +1,133 @@
+###############################################
+# MOMoGP Datasets for Multi-output Regression #
+###############################################
+
+#### Energy ####
+
+momogp_energy.x_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/energy/x_train.csv
+
+momogp_energy.y_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/energy/y_train.csv
+
+momogp_energy.x_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/energy/x_test.csv
+
+momogp_energy.y_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/energy/y_test.csv
+
+momogp_energy.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/MOMoGP/energy/model
+
+momogp_energy.summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/MOMoGP/energy/summary.csv
+
+#### Parkinsons ####
+
+momogp_parkinsons.x_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/Parkinsons/x_train.csv
+
+momogp_parkinsons.y_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/Parkinsons/y_train.csv
+
+momogp_parkinsons.x_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/Parkinsons/x_test.csv
+
+momogp_parkinsons.y_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/Parkinsons/y_test.csv
+
+momogp_parkinsons.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/MOMoGP/Parkinsons/model
+
+momogp_parkinsons.summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/MOMoGP/Parkinsons/summary.csv
+
+#### scm20d ####
+
+momogp_scm20d.x_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/scm20d/x_train.csv
+
+momogp_scm20d.y_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/scm20d/y_train.csv
+
+momogp_scm20d.x_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/scm20d/x_test.csv
+
+momogp_scm20d.y_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/scm20d/y_test.csv
+
+momogp_scm20d.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/MOMoGP/scm20d/model
+
+momogp_scm20d.summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/MOMoGP/scm20d/summary.csv
+
+#### US flight ####
+
+momogp_usflight.x_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/usflight/x_train.csv
+
+momogp_usflight.y_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/usflight/y_train.csv
+
+momogp_usflight.x_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/usflight/x_test.csv
+
+momogp_usflight.y_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/usflight/y_test.csv
+
+momogp_usflight.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/MOMoGP/usflight/model
+
+momogp_usflight.summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/MOMoGP/usflight/summary.csv
+
+#### Wind ####
+
+momogp_wind.x_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/wind/x_train.csv
+
+momogp_wind.y_train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/wind/y_train.csv
+
+momogp_wind.x_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/wind/x_test.csv
+
+momogp_wind.y_test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/MOMoGP/wind/y_test.csv
+
+momogp_wind.model:
+  type: probabilistic_flow_boosting.extras.datasets.tfboost_dataset.TFBoostDataSet
+  filepath: data/06_models/MOMoGP/wind/model
+
+momogp_wind.summary:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/MOMoGP/wind/summary.csv
