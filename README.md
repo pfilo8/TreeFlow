@@ -52,13 +52,13 @@ from src.probabilistic_flow_boosting.tfboost.flow import ContinuousNormalizingFl
 tree = EmbeddableCatBoostPriorNormal(loss_function="RMSEWithUncertainty", depth=2, num_trees=100)
 flow = ContinuousNormalizingFlow(input_dim=1, hidden_dims=(16, 16), num_blocks=2, context_dim=16, conditional=True)
 
-treeflow = TreeFlow(tree, flow, embedding_size=50)
+treeflow = TreeFlow(tree, flow, embedding_size=16)
 
 x, y = load_diabetes(return_X_y=True)
 x_train, x_test, y_train, y_test = train_test_split(x, y)
 x_train, x_val, y_train, y_val = train_test_split(x_train, y_train)
 
-treeflow.fit(x_train, y_train, x_val, y_val, n_epochs=100, batch_size=1024, verbose=True)
+treeflow.fit(x_train, y_train, x_val, y_val, n_epochs=50, batch_size=1024, verbose=True)
 samples = treeflow.sample(x_test, num_samples=1000)  # Shape (X number of samples, num_samples, Y dimension / input_dim)
 samples = samples.squeeze(axis=-1)
 
