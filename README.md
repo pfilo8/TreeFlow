@@ -91,6 +91,7 @@ Source code in `src/probabilistic_flow_boosting` directory contains the followin
   * `tfboost` - Implementation of the TreeFlow.
 
 Side note regarding codebase: originally TreeFlow appears in the implementation as TFBoost or the whole repository mentions `probabilistic_flow_boosting` which was the previous name of the method. To do not break things we have decided to leave the names as it is.
+Side note regarding notebooks: It might be a case that you need to put the notebook in the root directory.
 
 ## Data
 
